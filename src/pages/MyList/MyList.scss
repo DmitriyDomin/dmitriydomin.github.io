@@ -1,0 +1,16 @@
+.My-list {
+  padding: 40px;
+  --list-border-color: transparent;
+}
+
+.My-list__header {
+  display: flex;
+  & h1 {
+    color: white;
+    font-size: 100px;
+    width: 60%;
+  }
+  & img {
+    width: 40%;
+  }
+}

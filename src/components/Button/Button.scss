@@ -1,0 +1,19 @@
+.Button {
+  --border-color: var(--button-border-color, red);
+  --border-color-hover: var(--button-border-color-hover, red);
+  --background-hover: var(--button-background-hover, transparent);
+
+  padding: 10px 16px;
+  font-size: 18px;
+  border: 2px solid var(--border-color);
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    background: var(--background-hover);
+    border-color: var(--border-color-hover);
+  }
+}

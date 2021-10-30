@@ -1,0 +1,44 @@
+.Movie-page {
+  padding: 50px 150px 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Movie-page-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Movie-info {
+  width: 37%;
+}
+
+.Movie-img {
+  width: 60%;
+}
+
+.Movie-title {
+  font-size: 60px;
+  color: white;
+  margin-bottom: 100px;
+}
+
+.Movie-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.Movie-rating {
+  color: white;
+  position: relative;
+  font-size: 16px;
+  .Icon-star {
+    color: gold;
+    margin-right: 10px;
+  }
+}
+
+.Movie-description {
+  color: white;
+  font-size: 24px;
+}

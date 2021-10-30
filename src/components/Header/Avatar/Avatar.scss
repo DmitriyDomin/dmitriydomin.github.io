@@ -1,0 +1,26 @@
+.Avatar-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    .Avatar-image {
+      border-color: red;
+    }
+    .Avatar-name {
+      color: red;
+    }
+  }
+}
+
+.Avatar-image {
+  border-radius: 50%;
+  border: 1px solid transparent;
+}
+
+.Avatar-name {
+  font-size: 20px;
+  color: #FFFFFF;
+  margin-right: 20px;
+}

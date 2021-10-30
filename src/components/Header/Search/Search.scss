@@ -1,0 +1,46 @@
+.Search-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.Input-container {
+  position: relative;
+  width: 60%;
+  transition: all .5s ease-out;;
+}
+
+.Search-input {
+  width: 100%;
+  background: transparent;
+  color: #FFF;
+  padding: 8px 12px;
+  border: 2px solid rgba(245, 245, 241, 0.2);
+  border-radius: 15px;
+  font-size: 16px;
+}
+
+.Input-container.Active {
+  width: 90%;
+  & {
+    .Search-input {
+      border-color: red;
+    }
+  }
+}
+
+.Search-input:focus {
+  outline: none;
+}
+
+.Icon {
+  color: white;
+  position: absolute;
+  right: -20px;
+  top: 12px;
+  z-index: 99;
+  cursor: pointer;
+  &:hover {
+    transform: scale(2);
+  }
+}

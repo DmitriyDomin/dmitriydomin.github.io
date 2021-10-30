@@ -1,0 +1,62 @@
+.Movie-list {
+
+  --border-color: var(--list-border-color, #222);
+
+  padding: 20px 40px;
+  & h2 {
+    font-size: 32px;
+    margin: 0 0 20px 0;
+    color: white;
+  }
+  border-bottom: 8px solid var(--border-color);
+}
+
+.List {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Recent {
+  & .List {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & .Movie {
+      width: 80%;
+      & .Movie-component {
+        height: 400px;
+        background-size: 80%;
+        &:hover {
+          background-size: 110%;
+        }
+      }
+    }
+  }
+}
+
+.Movie {
+  width: 19%;
+  margin: 0 0.5% 40px;
+}
+
+.remove-btn {
+  margin-right: 0.5rem;
+}
+
+.item-enter {
+  opacity: 0;
+}
+.item-enter-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}
+.item-exit {
+  opacity: 1;
+  transform: translate(0,0);
+}
+.item-exit-active {
+  opacity: 0;
+  transform: translate(500px, 0);
+  width: 0;
+  transition: all 500ms ease-in;
+}
