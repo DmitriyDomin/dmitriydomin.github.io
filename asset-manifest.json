@@ -3,8 +3,8 @@
     "static/js/0.2dd34dcb.chunk.js": "/netflix-react/static/js/0.2dd34dcb.chunk.js",
     "static/js/0.2dd34dcb.chunk.js.map": "/netflix-react/static/js/0.2dd34dcb.chunk.js.map",
     "main.css": "/netflix-react/static/css/main.e9d83066.chunk.css",
-    "main.js": "/netflix-react/static/js/main.7862d5a9.chunk.js",
-    "main.js.map": "/netflix-react/static/js/main.7862d5a9.chunk.js.map",
+    "main.js": "/netflix-react/static/js/main.4637b89c.chunk.js",
+    "main.js.map": "/netflix-react/static/js/main.4637b89c.chunk.js.map",
     "runtime-main.js": "/netflix-react/static/js/runtime-main.67705ca1.js",
     "runtime-main.js.map": "/netflix-react/static/js/runtime-main.67705ca1.js.map",
     "static/css/3.1fb776ff.chunk.css": "/netflix-react/static/css/3.1fb776ff.chunk.css",
@@ -46,6 +46,6 @@
     "static/css/3.1fb776ff.chunk.css",
     "static/js/3.0dd1be0f.chunk.js",
     "static/css/main.e9d83066.chunk.css",
-    "static/js/main.7862d5a9.chunk.js"
+    "static/js/main.4637b89c.chunk.js"
   ]
 }
