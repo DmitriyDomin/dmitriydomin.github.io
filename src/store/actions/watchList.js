@@ -7,6 +7,13 @@ export const setMovies = (movies) => {
   }
 }
 
+export const setRecent = (movies) => {
+  return {
+    type: actionTypes.SET_RECENT,
+    movies
+  }
+}
+
 export const addMovie = (movieId) => {
   return {
     type: actionTypes.ADD_MOVIE,
@@ -31,9 +38,16 @@ export const addRecent = (movieId) => {
 export const initMovies = () => {
   return dispatch => {
     const movies = JSON.parse(localStorage.getItem('movies'));
-    console.log(!movies.length);
     if (!movies) return;
     dispatch(setMovies(movies));
+  }
+}
+
+export const initRecentMovies = () => {
+  return dispatch => {
+    const movies = JSON.parse(localStorage.getItem('recent'));
+    if (!movies) return;
+    dispatch(setRecent(movies));
   }
 }
 

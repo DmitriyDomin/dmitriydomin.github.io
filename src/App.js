@@ -20,9 +20,10 @@ const App = props => {
   const dispatch = useDispatch();
 
   const onInitMovies = useCallback(() => dispatch(actions.initMovies()), [dispatch]);
+  const onInitRecentMovies = useCallback(() => dispatch(actions.initRecentMovies()), [dispatch]);
 
   useEffect(() => {
-    console.log(TrendingMovies, 'T');
+    onInitRecentMovies();
     onInitMovies();
   }, [onInitMovies]);
 

@@ -31,11 +31,11 @@ const Movie = props => {
   return (
     <div className='Movie-page'>
       <h1 className="Movie-title">
-        { Movies[movieId].name }
+        { Movies.find(movie => movie.id === movieId).name }
       </h1>
       <div className="Movie-page-container">
         <div className="Movie-img">
-          <img src={ Movies[movieId].imageSrc } alt="" />
+          <img src={  Movies.find(movie => movie.id === movieId).imageSrc } alt="" />
         </div>
         <div className="Movie-info">
           <div className="Movie-rating">
@@ -43,10 +43,10 @@ const Movie = props => {
               className='Icon-star'
               icon={ faStar }
             />
-            { Movies[movieId].rating } / {  MaxRating }
+            {  Movies.find(movie => movie.id === movieId).rating } / {  MaxRating }
           </div>
           <div className="Movie-description">
-            { Movies[movieId].description }
+            {  Movies.find(movie => movie.id === movieId).description }
           </div>
         </div>
       </div>

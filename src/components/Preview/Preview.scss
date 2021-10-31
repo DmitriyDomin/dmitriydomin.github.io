@@ -43,8 +43,11 @@
 
 .Image-container {
   width: 50%;
+  display: flex;
+  align-items: center;
   & img {
-    max-width: 100%;
+    width: 100%;
+
   }
 }
 
@@ -55,7 +58,7 @@
 .Preview-item-enter-active {
   opacity: 1;
   transform: translate(0,0);
-  transition: all 500ms ease-in;
+  transition: all 300ms ease-in;
 }
 .Preview-item-exit {
   opacity: 1;
@@ -64,5 +67,17 @@
 .Preview-item-exit-active {
   opacity: 0;
   transform: translate(-900px, 0);
-  transition: all 500ms ease-in;
+  transition: all 300ms ease-in;
+}
+
+@media screen and (max-width: 1280px) {
+  .Preview-container {
+    padding: 70px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Preview-container {
+    padding: 50px;
+  }
 }

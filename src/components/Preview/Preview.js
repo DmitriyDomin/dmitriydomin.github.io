@@ -38,7 +38,7 @@ const Preview = props => {
     if (timer) clearInterval(timer);
     setTimeout(() => {
       setShowPreview(true);
-    }, 500);
+    }, 300);
     const interval = setInterval(() => {
       changePreview()
     }, TimeToChange * 1000);
@@ -47,8 +47,10 @@ const Preview = props => {
 
   const changePreview = () => {
     setShowPreview(false);
-    const movieId = getRandomArbitrary(0, Movies.length, preview.id);
-    dispatch(actions.changePreview(movieId));
+    setTimeout(() => {
+      const movieId = getRandomArbitrary(0, Movies.length, preview.id);
+      dispatch(actions.changePreview(movieId));
+    }, 300);
   }
 
   const getRandomArbitrary = (min, max, current) => {
@@ -68,13 +70,14 @@ const Preview = props => {
 
   const toMovie = () => {
     history.push(`/movie?movieId=${preview.id}`);
+    changePreview();
   }
 
   return (
     <div className='Preview-container'>
     <CSSTransition
       in={ showPreview }
-      timeout={500}
+      timeout={300}
       unmountOnExit
       classNames='Preview-item'
     >

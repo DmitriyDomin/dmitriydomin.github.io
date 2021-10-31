@@ -14,3 +14,11 @@
     width: 40%;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .My-list__header {
+    & h1 {
+      font-size: 60px;
+    }
+  }
+}

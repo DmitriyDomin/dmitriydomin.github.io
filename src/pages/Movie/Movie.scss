@@ -15,6 +15,9 @@
 
 .Movie-img {
   width: 60%;
+  & img {
+    width: 100%;
+  }
 }
 
 .Movie-title {
@@ -42,3 +45,34 @@
   color: white;
   font-size: 24px;
 }
+
+@media screen and (max-width: 1500px) {
+  .Movie-page-container {
+    flex-direction: column;
+  }
+
+  .Movie-info {
+    width: 100%;
+  }
+
+  .Movie-img {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .Movie-title {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Movie-title {
+    font-size: 50px;
+    margin-bottom: 40px;
+  }
+
+  .Movie-page {
+    padding: 30px 70px;
+  }
+}
+

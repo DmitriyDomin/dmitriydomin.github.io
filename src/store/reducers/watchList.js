@@ -14,6 +14,10 @@ const saveMoviesToLocalStorage = (newMovies) => {
   localStorage.setItem('movies', JSON.stringify(newMovies));
 }
 
+const saveRecentToLocalStorage = (newRecent) => {
+  localStorage.setItem('recent', JSON.stringify(newRecent));
+}
+
 const addMovie = (state, action) => {
   if (state.movies.find(movie => movie.id === action.movieId)) return;
   const newMovie = { ... Movies.find(movie => movie.id === action.movieId) }
@@ -27,13 +31,24 @@ const setMovies = (state, action) => {
   return { movies: updatedMovies };
 }
 
+const setRecent = (state, action) => {
+  const updatedMovies = [...action.movies];
+  return { recent: updatedMovies };
+}
+
 const addRecent = (state, action) => {
-  if (state.recent.find(movie => movie.id === action.movieId)) return;
   const updatedMovies = state.recent.slice();
-  console.log(updatedMovies, action);
-  if (state.recent.length === RECENT_AMOUNT) updatedMovies.pop();
+  const index = state.recent.findIndex(movie => movie.id === action.movieId);
+  console.log(index, updatedMovies);
+  if (index > -1) {
+    updatedMovies.splice(index, 1);
+    console.log(updatedMovies, 'dsfdsfdsfds');
+  } else if (state.recent.length === RECENT_AMOUNT) {
+    updatedMovies.pop();
+  }
   updatedMovies.unshift(Movies.find(movie => movie.id === action.movieId));
-  console.log((Movies.find(movie => movie.id === action.movieId)));
+  console.log(updatedMovies);
+  saveRecentToLocalStorage(updatedMovies);
   return { recent: updatedMovies };
 }
 
@@ -61,6 +76,8 @@ const watchList = (state = initialState, action) => {
       return updateObject(state, changePreview(state, action));
     case actionTypes.ADD_RECENT:
       return updateObject(state, addRecent(state, action));
+    case actionTypes.SET_RECENT:
+      return updateObject(state, setRecent(state, action));
     default:
       return state;
   }

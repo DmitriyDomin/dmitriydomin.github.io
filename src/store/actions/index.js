@@ -4,6 +4,7 @@ export {
   setMovies,
   initMovies,
   changePreview,
-  addRecent
+  addRecent,
+  initRecentMovies
 } from './watchList';
 

@@ -17,12 +17,14 @@
 }
 
 .Recent {
+  border-bottom: none;
   & .List {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     & .Movie {
       width: 80%;
+      margin-bottom: 60px;
       & .Movie-component {
         height: 400px;
         background-size: 80%;
@@ -48,7 +50,7 @@
 }
 .item-enter-active {
   opacity: 0;
-  transition: opacity 500ms ease-in;
+  transition: opacity 300ms ease-in;
 }
 .item-exit {
   opacity: 1;
@@ -58,5 +60,44 @@
   opacity: 0;
   transform: translate(500px, 0);
   width: 0;
-  transition: all 500ms ease-in;
+  transition: all 300ms ease-in;
+}
+
+@media screen and (max-width: 1500px) {
+  .Movie {
+    width: 32%;
+    margin: 0 0.5% 30px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .Preview-container {
+    height: 40vw;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Preview-container {
+    height: 500px;
+  }
+
+  .Movie {
+    width: 49%;
+  }
+
+  .Recent {
+    & .List {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      & .Movie {
+        width: 100%;
+        margin-bottom: 24px;
+        & .Movie-component {
+          height: 300px;
+        }
+      }
+    }
+  }
 }

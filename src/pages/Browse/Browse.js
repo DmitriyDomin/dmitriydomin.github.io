@@ -32,7 +32,7 @@ const Browse = props => {
         <MovieList movies = { movies.dramas } title='Dramas'> </MovieList>,
         <MovieList movies = { movies.sciFi } title='SciFi'> </MovieList>,
         <MovieList movies = { movies.comedies } title='Comedies'> </MovieList>,
-        <MovieList movies = { movies.horrors } title='Actions'> </MovieList>
+        <MovieList movies = { movies.actions } title='Actions'> </MovieList>
       </div>
     )
   : (

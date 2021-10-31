@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimesCircle } from '@fortawesome/fontawesome-free-solid'
 import { useHistory } from "react-router-dom";
 
-const MainPath = '/';
+const PathsToRedirect = ['/', '/movie'];
 
 const Search = (props) => {
 
@@ -22,7 +22,8 @@ const Search = (props) => {
   }
 
   const searchForMovie = (value = searchValue) => {
-    if (history.location.pathname === MainPath) {
+    console.log(history.location);
+    if (PathsToRedirect.some(path => path === history.location.pathname)) {
       history.push(`/browse?movieName=${value}`);
     } else {
       history.push(`?movieName=${value}`);
