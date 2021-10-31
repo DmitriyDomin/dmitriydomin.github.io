@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/TopPicks/TopPicks.js"],"names":["TopList"],"mappings":"qHAAA,uBAUeA,UARC,WACd,OACE","file":"static/js/9.c3b48082.chunk.js","sourcesContent":["import React from 'react';\r\n\r\nconst TopList = () => {\r\n  return (\r\n    <div>\r\n      Top picks\r\n    </div>\r\n  );\r\n}\r\n\r\nexport default TopList;\r\n"],"sourceRoot":""}

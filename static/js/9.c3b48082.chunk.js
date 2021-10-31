@@ -1,0 +1,2 @@
+(this["webpackJsonpnetflix-react"]=this["webpackJsonpnetflix-react"]||[]).push([[9],{76:function(t,e,c){"use strict";c.r(e);c(0);var i=c(1);e.default=function(){return Object(i.jsx)("div",{children:"Top picks"})}}}]);
+//# sourceMappingURL=9.c3b48082.chunk.js.map
